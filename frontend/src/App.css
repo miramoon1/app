@@ -25,9 +25,8 @@
     transform: translateY(-4px);
 }
 
-/* Feature card */
+/* Feature card - no background set, let Tailwind bg-* classes work */
 .feature-card {
-    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
     transition: all 0.35s ease;

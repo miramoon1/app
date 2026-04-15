@@ -3,6 +3,9 @@
 ## Original Problem Statement
 Mira Knaup (Webdesignerin aus Müllheim bei Freiburg) had an existing HTML landing page for FREEsites that felt too plain/white. She wanted it more colorful, unique, with "flavor" and personal info about herself.
 
+## Iteration 2
+User requested: lighter (heller), friendlier (freundlicher), more varied/colorful (abwechslungsreicher) design. Provided actual photo of herself to use as circular portrait with cropped sides.
+
 ## User Persona
 - **Mira Knaup** – Freelance web designer from Müllheim bei Freiburg, Germany
 - Offers free website design; clients only pay if they love it
@@ -12,11 +15,11 @@ Mira Knaup (Webdesignerin aus Müllheim bei Freiburg) had an existing HTML landi
 - **Frontend**: React (CRA + Craco + Tailwind CSS) – single-page landing page
 - **Backend**: FastAPI (minimal, not actively used for this page)
 - **Database**: MongoDB (not used for this static page)
-- **Hosting**: Emergent Preview
 
 ## Core Requirements (Static)
-- Dark theme with fresh lime (#A3E635) / turquoise (#2DD4BF) / emerald accents
+- Light, friendly theme with soft green/teal/amber accents
 - Fonts: Outfit (headings) + Manrope (body)
+- Mira's real photo as circular portrait
 - Sections: Nav, Hero, How It Works, Über Mich, Benefits (Bento), Contact, Footer
 - DSGVO-compliant Datenschutz modal
 - Impressum modal
@@ -24,21 +27,24 @@ Mira Knaup (Webdesignerin aus Müllheim bei Freiburg) had an existing HTML landi
 - Mobile responsive with hamburger menu
 
 ## What's Been Implemented (Jan 2026)
-- [x] Full React rewrite from single HTML to component-based architecture
-- [x] Electric neon lime/turquoise color scheme on deep dark background
-- [x] Floating glassmorphism navigation bar with mobile menu
-- [x] Hero section with animated blobs, gradient text, bouncing CTA
-- [x] 3-step "How It Works" section with neon-bordered cards
-- [x] "Über mich" section with portrait, bio text, skill tags, location badge
-- [x] Bento Grid benefits layout (5 cards, varied spans)
-- [x] Contact section with WhatsApp CTA card + contact info
-- [x] Footer with Shadcn Dialog modals for Impressum & Datenschutz
+### V1 - Dark Theme
+- [x] Full React rewrite from single HTML
+- [x] Electric neon lime/turquoise on dark background
+
+### V2 - Light Theme (Current)
+- [x] Complete redesign to light, friendly theme (#f8faf8 background)
+- [x] Mira's actual photo as circular portrait with teal glow ring + "Müllheim bei Freiburg" floating badge
+- [x] Soft green gradient nav with glassmorphism
+- [x] Colorful, varied section backgrounds (mint, teal-mist, warm)
+- [x] Step cards with green/teal/amber color coding
+- [x] Bento Grid benefits with 5 different color schemes (green, teal, violet, amber, rose)
+- [x] Green gradient WhatsApp CTA card in contact section
+- [x] White footer with Shadcn Dialog modals for Impressum & Datenschutz
 - [x] Full DSGVO-compliant German privacy policy
-- [x] Scroll reveal animations, hover effects, neon glows
-- [x] All tests passed (100%)
+- [x] Scroll reveal animations, hover effects
+- [x] All tests passed (95% → 100% after CSS fix)
 
 ## Backlog / Future
-- P1: Add real photo of Mira (currently using stock photo)
 - P1: Add portfolio/showcase section with previous work examples
 - P2: Add testimonials/reviews section
 - P2: Cookie consent banner
