@@ -1,0 +1,115 @@
+{
+  "theme": "dark",
+  "archetype": "Electric Neon meets Swiss Brutalism (Custom blend for user's vibrant request)",
+  "colors": {
+    "background": "#050A09",
+    "foreground": "#FFFFFF",
+    "primary": "#A3E635",
+    "primary_foreground": "#000000",
+    "secondary": "#2DD4BF",
+    "secondary_foreground": "#000000",
+    "accent": "#10B981",
+    "muted": "#1E293B",
+    "muted_foreground": "#94A3B8",
+    "border": "#1E293B"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "weights": {
+      "heading": "font-black",
+      "body": "font-normal"
+    },
+    "scales": {
+      "h1": "text-5xl sm:text-7xl tracking-tighter",
+      "h2": "text-4xl sm:text-5xl tracking-tight",
+      "h3": "text-2xl sm:text-3xl",
+      "body": "text-base sm:text-lg leading-relaxed"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-24 sm:py-32",
+    "container": "max-w-7xl mx-auto px-6 sm:px-8",
+    "grid_system": "Bento Grid (Mode A: Tetris) for Benefits, Asymmetric layouts elsewhere",
+    "border_radius": "rounded-3xl"
+  },
+  "surface_styles": {
+    "glass": "bg-black/40 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+    "neon_border": "border border-lime-500/30 hover:border-lime-500/80 transition-all duration-300 shadow-[0_0_15px_rgba(163,230,53,0.05)] hover:shadow-[0_0_30px_rgba(163,230,53,0.2)]",
+    "nav": "fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-6 py-4"
+  },
+  "sections": {
+    "navigation": {
+      "layout": "Floating pill header, crystal glassmorphism",
+      "elements": [
+        "Logo: 'FREEsites' (bold text, dot accent)",
+        "Links: So geht's, Über mich, Vorteile",
+        "CTA: WhatsApp Icon Button"
+      ]
+    },
+    "hero": {
+      "layout": "Centered massive typography with abstract glowing neon background element. Asymmetrical floating badges for 'Risk-Free' and 'Webdesign aus Müllheim'.",
+      "visuals": "Abstract neon 3D background behind text. Heavy contrast overlay so text is readable.",
+      "cta": "Massive Lime Button with WhatsApp Icon"
+    },
+    "how_it_works": {
+      "layout": "3-column grid, steps connected by a subtle gradient line. Cards use `neon_border` style on hover. Step numbers are massive and semi-transparent."
+    },
+    "about_me": {
+      "layout": "2-column asymmetrical. Left: Large rounded portrait of Mira Knaup with a turquoise glow behind it. Right: Bold storytelling typography."
+    },
+    "benefits": {
+      "layout": "Bento Grid (Tetris Mode). Mix of spans (col-span-full md:col-span-8, col-span-4) to create visual tension. Highlighting technology and the 'Free until you love it' guarantee."
+    },
+    "contact": {
+      "layout": "Massive call to action section. Full width card with glassmorphism and heavy lime/turquoise gradient accents. Huge WhatsApp button."
+    },
+    "footer": {
+      "layout": "Minimalist dark footer, links to Impressum and Datenschutz (which open as Dialog/Modals)."
+    }
+  },
+  "components": {
+    "buttons": "Shadcn Button heavily customized. Primary: bg-lime-400 text-black hover:bg-lime-300 font-bold rounded-full px-8 py-6 text-lg. Add icon.",
+    "modals": "Shadcn Dialog for Impressum/Datenschutz to keep the user on the single page.",
+    "cards": "Custom div structures using surface_styles (not standard Shadcn Card to allow more creative freedom)."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.pexels.com/photos/28494632/pexels-photo-28494632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Vibrant 3D abstract neon design for hero background"
+      },
+      {
+        "category": "about_me_portrait",
+        "url": "https://images.unsplash.com/photo-1762341114268-38fbe97e355d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGxhcHRvcCUyMG9mZmljZXxlbnwwfHx8fDE3NzYyODgxMTl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Portrait of Mira Knaup (professional woman at laptop)"
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "instructions": "Use Lucide icons. Add a slight drop shadow to icons (e.g. drop-shadow-[0_0_8px_rgba(45,212,191,0.8)]) for a glowing neon effect."
+    }
+  },
+  "interactions": {
+    "hover": "Buttons scale up slightly (scale-105). Cards glow on hover (shadow-lime-500/20).",
+    "scroll": "Staggered fade-up for bento grid items and list elements.",
+    "nav": "Always sticky, high backdrop blur."
+  },
+  "accessibility": {
+    "contrast": "Ensure white text on deep background exceeds 4.5:1. Black text on Lime/Turquoise buttons.",
+    "focus": "focus:ring-2 focus:ring-lime-400 focus:outline-none focus:ring-offset-2 focus:ring-offset-[#050A09]",
+    "testing": "All interactive elements MUST have data-testid attributes (e.g., data-testid='hero-cta-button')."
+  },
+  "instructions_to_main_agent": [
+    "Inject Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Outfit:wght@400;700;900&display=swap');",
+    "Extend Tailwind theme with font families: fontFamily: { heading: ['Outfit', 'sans-serif'], body: ['Manrope', 'sans-serif'] }.",
+    "Use custom HTML/Tailwind for layouts rather than rigid Shadcn structural components.",
+    "Implement the 'Über mich' (About Me) section using the provided portrait URL.",
+    "Use Dialog components for Impressum and Datenschutz in the footer so the user never leaves the landing page.",
+    "Make the WhatsApp CTAs extremely prominent with the Lime color.",
+    "Implement the background image in the hero section with a heavy dark overlay (e.g., bg-black/80 or bg-gradient-to-b from-black/60 to-[#050A09]) so text remains ultra-readable while the neon colors bleed through.",
+    "Ensure the bento grid in the Benefits section uses varied spans (e.g., md:col-span-8, md:col-span-4) for visual tension.",
+    "For .js files, ensure imports and syntax are standard React/JS, not TypeScript."
+  ]
+}
