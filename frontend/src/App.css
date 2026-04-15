@@ -25,7 +25,7 @@
     transform: translateY(-4px);
 }
 
-/* Feature card - no background set, let Tailwind bg-* classes work */
+/* Feature card - transparent bg, let Tailwind handle it */
 .feature-card {
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.03);
@@ -35,7 +35,7 @@
 .feature-card:hover {
     border-color: rgba(45, 212, 191, 0.3);
     box-shadow: 0 8px 32px rgba(45, 212, 191, 0.1);
-    transform: translateY(-4px);
+    transform: translateY(-6px) rotate(0.5deg);
 }
 
 /* Lime CTA button */
@@ -52,30 +52,9 @@
     transform: scale(1.05);
 }
 
-/* Teal accent button */
-.btn-teal {
-    background: linear-gradient(135deg, #14b8a6, #2dd4bf);
-    color: #ffffff;
-    font-weight: 700;
-    box-shadow: 0 4px 16px rgba(20, 184, 166, 0.25);
-    transition: all 0.3s ease;
-}
-
-.btn-teal:hover {
-    box-shadow: 0 8px 28px rgba(20, 184, 166, 0.35);
-    transform: scale(1.05);
-}
-
-/* Text gradient */
+/* Text gradients */
 .text-fresh-gradient {
     background: linear-gradient(135deg, #16a34a, #0d9488);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.text-lime-gradient {
-    background: linear-gradient(135deg, #84cc16, #22c55e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -99,10 +78,75 @@
     font-weight: 900;
     font-size: 4rem;
     line-height: 1;
-    color: rgba(45, 212, 191, 0.15);
 }
 
-/* Floating badge */
+/* ─── Floating bouncy website mockups ─── */
+@keyframes float-left {
+    0%, 100% { transform: rotate(-8deg) translateY(0px) translateX(0px); }
+    25% { transform: rotate(-6deg) translateY(-18px) translateX(4px); }
+    50% { transform: rotate(-9deg) translateY(-8px) translateX(-2px); }
+    75% { transform: rotate(-7deg) translateY(-22px) translateX(6px); }
+}
+
+@keyframes float-right {
+    0%, 100% { transform: rotate(7deg) translateY(0px) translateX(0px); }
+    25% { transform: rotate(9deg) translateY(-20px) translateX(-4px); }
+    50% { transform: rotate(6deg) translateY(-10px) translateX(3px); }
+    75% { transform: rotate(8deg) translateY(-24px) translateX(-6px); }
+}
+
+@keyframes float-left-2 {
+    0%, 100% { transform: rotate(-5deg) translateY(0px); }
+    33% { transform: rotate(-3deg) translateY(-15px); }
+    66% { transform: rotate(-6deg) translateY(-25px); }
+}
+
+@keyframes float-right-2 {
+    0%, 100% { transform: rotate(5deg) translateY(0px); }
+    33% { transform: rotate(7deg) translateY(-20px); }
+    66% { transform: rotate(4deg) translateY(-12px); }
+}
+
+.mockup-float-left {
+    animation: float-left 5s ease-in-out infinite;
+}
+
+.mockup-float-right {
+    animation: float-right 4.5s ease-in-out infinite;
+}
+
+.mockup-float-left-2 {
+    animation: float-left-2 6s ease-in-out infinite;
+}
+
+.mockup-float-right-2 {
+    animation: float-right-2 5.5s ease-in-out infinite;
+}
+
+/* Browser mockup */
+.browser-mockup {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.browser-dots {
+    display: flex;
+    gap: 6px;
+    padding: 10px 14px;
+    background: #f4f4f5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.browser-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* ─── Badge float ─── */
 @keyframes badge-float {
     0%, 100% { transform: translateY(0px) rotate(-2deg); }
     50% { transform: translateY(-6px) rotate(1deg); }
@@ -112,7 +156,7 @@
     animation: badge-float 4s ease-in-out infinite;
 }
 
-/* CTA bounce */
+/* ─── CTA bounce ─── */
 @keyframes bounce-cta {
     0%, 100% { transform: translateY(0); }
     40% { transform: translateY(-6px); }
@@ -123,7 +167,7 @@
     animation: bounce-cta 2.5s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 
-/* Light nav glass */
+/* ─── Nav glass ─── */
 .nav-glass {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
@@ -132,34 +176,42 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-/* Bento items */
+/* ─── Bento items ─── */
 .bento-item {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .bento-item:hover {
-    transform: translateY(-4px) scale(1.01);
+    transform: translateY(-6px) scale(1.01) rotate(-0.5deg);
 }
 
-/* Section backgrounds */
+/* ─── Section backgrounds ─── */
 .section-mint {
-    background: linear-gradient(180deg, #f0fdf4 0%, #f8faf8 100%);
+    background: linear-gradient(180deg, #ecfdf5 0%, #f0fdf4 50%, #f8faf8 100%);
 }
 
-.section-teal-mist {
-    background: linear-gradient(180deg, #f0fdfa 0%, #f8faf8 100%);
+.section-sky {
+    background: linear-gradient(180deg, #ecfeff 0%, #f0fdfa 50%, #f8faf8 100%);
 }
 
-.section-warm {
-    background: linear-gradient(180deg, #fefce8 0%, #f8faf8 100%);
+.section-peach {
+    background: linear-gradient(180deg, #fff7ed 0%, #fefce8 50%, #f8faf8 100%);
 }
 
-/* Photo glow ring */
+.section-lavender {
+    background: linear-gradient(180deg, #faf5ff 0%, #f5f3ff 50%, #f8faf8 100%);
+}
+
+.section-rose {
+    background: linear-gradient(180deg, #fff1f2 0%, #fce7f3 50%, #f8faf8 100%);
+}
+
+/* ─── Photo glow ─── */
 .photo-glow {
     box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.15), 0 0 40px rgba(45, 212, 191, 0.1);
 }
 
-/* Modal scrollbar */
+/* ─── Modal scrollbar ─── */
 .modal-content::-webkit-scrollbar {
     width: 6px;
 }
@@ -174,7 +226,58 @@
     border-radius: 8px;
 }
 
-/* Smooth scroll */
+/* ─── Marquee ─── */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+}
+
+/* ─── Wavy divider ─── */
+.wave-divider {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ─── Wiggle on hover ─── */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+.hover-wiggle:hover {
+    animation: wiggle 0.4s ease-in-out;
+}
+
+/* ─── Smooth scroll ─── */
 html {
     scroll-behavior: smooth;
+}
+
+/* ─── Counter animation ─── */
+@keyframes count-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Sparkle float ─── */
+@keyframes sparkle-float {
+    0%, 100% { transform: translateY(0px) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-15px) scale(1.2); opacity: 1; }
+}
+
+.sparkle-anim {
+    animation: sparkle-float 3s ease-in-out infinite;
 }
