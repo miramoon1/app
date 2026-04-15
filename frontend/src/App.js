@@ -221,20 +221,14 @@ function HeroSection() {
       <div className="bg-blob w-[300px] h-[300px] rounded-full bg-yellow-200 top-[20%] right-[15%]" style={{ opacity: 0.15 }} />
 
       {/* ─── Floating website mockups ─── */}
-      {/* Left side mockups - tilted left, partially off-screen */}
-      <div className="hidden lg:block absolute left-[-6%] top-[18%] w-[320px] mockup-float-left z-[1] opacity-80">
+      {/* Left - large, slightly tilted, gentle float */}
+      <div className="hidden lg:block absolute left-[-8%] top-[20%] w-[420px] z-[1] opacity-90" style={{ transform: 'rotate(-6deg)', animation: 'gentle-left 5s ease-in-out infinite' }}>
         <BrowserMockup imgSrc={MOCKUP_1} />
       </div>
-      <div className="hidden lg:block absolute left-[-3%] bottom-[8%] w-[260px] mockup-float-left-2 z-[1] opacity-60">
-        <BrowserMockup imgSrc={MOCKUP_3} />
-      </div>
 
-      {/* Right side mockups - tilted right, partially off-screen */}
-      <div className="hidden lg:block absolute right-[-6%] top-[15%] w-[300px] mockup-float-right z-[1] opacity-80">
+      {/* Right - large, slightly tilted, gentle float */}
+      <div className="hidden lg:block absolute right-[-8%] top-[18%] w-[400px] z-[1] opacity-90" style={{ transform: 'rotate(5deg)', animation: 'gentle-right 5.5s ease-in-out infinite' }}>
         <BrowserMockup imgSrc={MOCKUP_2} />
-      </div>
-      <div className="hidden lg:block absolute right-[-2%] bottom-[12%] w-[240px] mockup-float-right-2 z-[1] opacity-60">
-        <BrowserMockup imgSrc={MOCKUP_4} />
       </div>
 
       {/* Floating sparkles */}

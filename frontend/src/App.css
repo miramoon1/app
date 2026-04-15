@@ -80,47 +80,15 @@
     line-height: 1;
 }
 
-/* ─── Floating bouncy website mockups ─── */
-@keyframes float-left {
-    0%, 100% { transform: rotate(-8deg) translateY(0px) translateX(0px); }
-    25% { transform: rotate(-6deg) translateY(-18px) translateX(4px); }
-    50% { transform: rotate(-9deg) translateY(-8px) translateX(-2px); }
-    75% { transform: rotate(-7deg) translateY(-22px) translateX(6px); }
+/* ─── Gentle float for hero mockups ─── */
+@keyframes gentle-left {
+    0%, 100% { transform: rotate(-6deg) translateY(0px); }
+    50% { transform: rotate(-6deg) translateY(-10px); }
 }
 
-@keyframes float-right {
-    0%, 100% { transform: rotate(7deg) translateY(0px) translateX(0px); }
-    25% { transform: rotate(9deg) translateY(-20px) translateX(-4px); }
-    50% { transform: rotate(6deg) translateY(-10px) translateX(3px); }
-    75% { transform: rotate(8deg) translateY(-24px) translateX(-6px); }
-}
-
-@keyframes float-left-2 {
-    0%, 100% { transform: rotate(-5deg) translateY(0px); }
-    33% { transform: rotate(-3deg) translateY(-15px); }
-    66% { transform: rotate(-6deg) translateY(-25px); }
-}
-
-@keyframes float-right-2 {
+@keyframes gentle-right {
     0%, 100% { transform: rotate(5deg) translateY(0px); }
-    33% { transform: rotate(7deg) translateY(-20px); }
-    66% { transform: rotate(4deg) translateY(-12px); }
-}
-
-.mockup-float-left {
-    animation: float-left 5s ease-in-out infinite;
-}
-
-.mockup-float-right {
-    animation: float-right 4.5s ease-in-out infinite;
-}
-
-.mockup-float-left-2 {
-    animation: float-left-2 6s ease-in-out infinite;
-}
-
-.mockup-float-right-2 {
-    animation: float-right-2 5.5s ease-in-out infinite;
+    50% { transform: rotate(5deg) translateY(-10px); }
 }
 
 /* Browser mockup */
