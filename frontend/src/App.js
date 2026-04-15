@@ -221,11 +221,11 @@ function HeroSection() {
       <div className="bg-blob w-[300px] h-[300px] rounded-full bg-yellow-200 top-[20%] right-[15%]" style={{ opacity: 0.15 }} />
 
       {/* ─── Floating website mockups – large & clipped ─── */}
-      <div className="hidden lg:block absolute left-[-18%] top-[12%] w-[560px] z-[1] opacity-90" style={{ transform: 'rotate(-6deg)', animation: 'gentle-left 5s ease-in-out infinite' }}>
+      <div className="hidden lg:block absolute left-[-22%] top-[10%] w-[600px] z-[1] opacity-85" style={{ transform: 'rotate(-6deg)', animation: 'gentle-left 5s ease-in-out infinite' }}>
         <BrowserMockup imgSrc={MOCKUP_1} />
       </div>
 
-      <div className="hidden lg:block absolute right-[-18%] top-[10%] w-[540px] z-[1] opacity-90" style={{ transform: 'rotate(5deg)', animation: 'gentle-right 5.5s ease-in-out infinite' }}>
+      <div className="hidden lg:block absolute right-[-22%] top-[8%] w-[580px] z-[1] opacity-85" style={{ transform: 'rotate(5deg)', animation: 'gentle-right 5.5s ease-in-out infinite' }}>
         <BrowserMockup imgSrc={MOCKUP_2} />
       </div>
 
