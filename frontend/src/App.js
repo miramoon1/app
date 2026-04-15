@@ -621,9 +621,9 @@ function GuaranteeBanner() {
 /* ─── Contact Section ─── */
 function ContactSection() {
   return (
-    <section id="contact" data-testid="contact-section" className="relative z-10">
+    <section id="contact" data-testid="contact-section" className="relative z-10 section-peach">
       <WaveDivider color="#fff7ed" />
-      <div className="section-peach py-24 sm:py-32">
+      <div className="py-24 sm:py-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
             <ScrollReveal className="md:col-span-2 space-y-8">
