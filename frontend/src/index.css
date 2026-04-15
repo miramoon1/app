@@ -5,27 +5,27 @@
 @tailwind utilities;
 
 :root {
-    --background: 160 33% 2%;
-    --foreground: 0 0% 100%;
-    --card: 160 33% 2%;
-    --card-foreground: 0 0% 100%;
-    --popover: 160 33% 4%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 82 85% 55%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 168 76% 50%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 160 84% 39%;
-    --accent-foreground: 0 0% 0%;
+    --background: 140 20% 98%;
+    --foreground: 220 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+    --primary: 82 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 168 76% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 140 10% 93%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 160 60% 94%;
+    --accent-foreground: 220 25% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 82 85% 55%;
-    --chart-1: 82 85% 55%;
-    --chart-2: 168 76% 50%;
+    --border: 140 10% 88%;
+    --input: 140 10% 88%;
+    --ring: 82 85% 45%;
+    --chart-1: 82 85% 45%;
+    --chart-2: 168 76% 42%;
     --chart-3: 160 84% 39%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
@@ -40,8 +40,8 @@
 
 body {
     font-family: 'Manrope', sans-serif;
-    background: #050A09;
-    color: #ffffff;
+    background: #f8faf8;
+    color: #1a2332;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 ::selection {
     background: rgba(163, 230, 53, 0.3);
-    color: #ffffff;
+    color: #1a2332;
 }
 
 ::-webkit-scrollbar {
@@ -61,16 +61,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-    background: #050A09;
+    background: #f0f4f0;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(163, 230, 53, 0.3);
+    background: rgba(45, 212, 191, 0.4);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(163, 230, 53, 0.5);
+    background: rgba(45, 212, 191, 0.6);
 }
 
 @layer base {
